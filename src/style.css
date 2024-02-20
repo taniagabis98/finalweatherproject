@@ -80,7 +80,8 @@ main {
 }
 
 .weather-app-icon {
-  font-size: 60px;
+  width: 95px;
+  height: 95px;
   margin-top: 22px;
 }
 
