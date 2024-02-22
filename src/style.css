@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #a0cfef;
+  color: #70a3bf;
 }
 
 .weather-app {
@@ -69,18 +69,6 @@ main {
   color: #5d6d7d;
   font-weight: 500;
   margin-bottom: 50px;
-}
-
-.weather-app-details.time {
-  color: pink;
-}
-
-.weather-app-details-humidity {
-  color: #5d6d7d;
-}
-
-.weather-app-details-wind {
-  color: #5d6d7d;
 }
 
 .weather-app-temperature-container {
