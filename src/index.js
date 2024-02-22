@@ -52,15 +52,16 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", handleSearchSubmit);
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHtml = "";
 
-searchCity("Melbourne");
-
-let forecast = document.querySelector("#forecast");
-forecast.innerHTML = `
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
   <div class="weather-forecast-day">
-    <div class="weather-forecast-date">Fri</div>
+    <div class="weather-forecast-date">${day}</div>
     <div class="weather-forecast-icon"> ☀️ </div>
     <div class="weather-forecast-temperature">
       <span class="weather-forecast-temperature-max">38°</span>
@@ -68,3 +69,13 @@ forecast.innerHTML = `
     </div>
   </div>
 `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Melbourne");
+displayForecast();
