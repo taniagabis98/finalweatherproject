@@ -53,7 +53,7 @@ function handleSearchSubmit(event) {
 }
 
 function displayForecast() {
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
   days.forEach(function (day) {
@@ -67,6 +67,7 @@ function displayForecast() {
       <span class="weather-forecast-temperature-max">38°</span>
       <span class="weather-forecast-temperature-min">12°</span>
     </div>
+  </div>
   </div>
 `;
   });
